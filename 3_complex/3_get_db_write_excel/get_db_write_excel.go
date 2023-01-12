@@ -93,8 +93,8 @@ func writeToExcel(users []UserDb) error {
 			}
 		}
 	}
-	
-	err = file.SaveAs("3_complex/3_get_db_write_excel/to/new.xlsx")
+
+	err = file.SaveAs("3_complex/3_get_db_write_excel/to/data.xlsx")
 	if err != nil {
 		return err
 	}
