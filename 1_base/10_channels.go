@@ -102,7 +102,7 @@ func (u User2) getActivityInfo() string {
 }
 
 func saveUserInfo3(user User2, wg *sync.WaitGroup) error {
-	fmt.Printf("Writing file for user: %d\n", user.id)
+	fmt.Printf("Writing file for users: %d\n", user.id)
 
 	time.Sleep(time.Millisecond * 10)
 

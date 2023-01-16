@@ -60,7 +60,7 @@ func errHandler(err error) {
 }
 
 func createDbConnection() (*sql.DB, error) {
-	dbConnection, err := sql.Open("postgres", "host=127.0.0.1 port=5432 user=pgs_usr password=12345Qwerty! dbname=pgs_db sslmode=disable")
+	dbConnection, err := sql.Open("postgres", "host=127.0.0.1 port=5432 users=pgs_usr password=12345Qwerty! dbname=pgs_db sslmode=disable")
 	if err != nil {
 		return nil, err
 	}

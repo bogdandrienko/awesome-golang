@@ -7,7 +7,7 @@ import (
 )
 
 // context.Background - on the top level
-// context.TODO - unknown task
+// context.TODO - unknown tasks
 // context.Value - use small and set not needed values
 
 func context1() {

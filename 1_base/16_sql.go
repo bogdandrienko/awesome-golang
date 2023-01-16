@@ -27,7 +27,7 @@ func query1() {
 	//createuser gin_user
 	//createdb gin_database -O gin_user
 	//psql gin_database
-	//alter user gin_user with password '12345Qwerty!';
+	//alter users gin_user with password '12345Qwerty!';
 	//GRANT ALL PRIVILEGES ON DATABASE gin_database TO gin_user;
 	// GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public to gin_user;
 	// GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public to gin_user;
@@ -44,7 +44,7 @@ func query1() {
 	// go get -u github.com/lib/pq
 
 	// mysql
-	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 user=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
+	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 users=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -82,7 +82,7 @@ func query1() {
 }
 
 func query2() {
-	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 user=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
+	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 users=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -105,7 +105,7 @@ func query2() {
 }
 
 func query3() {
-	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 user=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
+	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 users=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}

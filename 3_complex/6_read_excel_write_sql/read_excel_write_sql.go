@@ -72,7 +72,7 @@ func getFromExcel() ([]UserDb, error) {
 }
 
 func writeToDb(users []UserDb) error {
-	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 user=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
+	db, err := sql.Open("postgres", "host=127.0.0.1 port=5432 users=gin_user password=12345Qwerty! dbname=gin_database sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -9,25 +9,25 @@ import (
 )
 
 func concurrent1() {
-	go fmt.Println("concurrent task")
-	go fmt.Println("concurrent task")
-	go fmt.Println("concurrent task")
+	go fmt.Println("concurrent tasks")
+	go fmt.Println("concurrent tasks")
+	go fmt.Println("concurrent tasks")
 
 	time.Sleep(time.Second * 1) // TODO need to await start goroutines
-	fmt.Println("sync task")
+	fmt.Println("sync tasks")
 }
 
 func concurrent2() {
 	go func() {
 		time.Sleep(time.Second * 1)
-		go fmt.Println("another concurrent task")
+		go fmt.Println("another concurrent tasks")
 	}()
-	go fmt.Println("concurrent task")
-	go fmt.Println("concurrent task")
-	go fmt.Println("concurrent task")
+	go fmt.Println("concurrent tasks")
+	go fmt.Println("concurrent tasks")
+	go fmt.Println("concurrent tasks")
 
 	time.Sleep(time.Second * 2)
-	fmt.Println("sync task")
+	fmt.Println("sync tasks")
 }
 
 var actions = []string{
@@ -105,7 +105,7 @@ func generateUsers(count int) []User1 {
 }
 
 func saveUserInfo1(user User1) error {
-	fmt.Printf("Writing file for user: %d\n", user.id)
+	fmt.Printf("Writing file for users: %d\n", user.id)
 
 	time.Sleep(time.Millisecond * 10)
 
@@ -122,7 +122,7 @@ func saveUserInfo1(user User1) error {
 }
 
 func saveUserInfo2(user User1, wg *sync.WaitGroup) error {
-	fmt.Printf("Writing file for user: %d\n", user.id)
+	fmt.Printf("Writing file for users: %d\n", user.id)
 
 	time.Sleep(time.Millisecond * 10)
 
